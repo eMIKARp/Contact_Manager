@@ -1,0 +1,22 @@
+{
+  "name": "static",
+  "authors": [
+    "eMIKARp <emil.karpowicz@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-resource": "^1.7.5"
+  }
+}

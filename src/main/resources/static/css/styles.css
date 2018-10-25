@@ -1,0 +1,63 @@
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction:column;
+	height: inherit;
+	font-family:"Roboto", sans-serif;
+	background-color: white;
+	color:black;
+}
+
+.header{
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px solid lightgrey;
+	height: 15%;
+}
+
+.main{
+	display: flex;
+	display-direction:row;
+	height: 70%;
+}
+
+.leftSection{
+	display: flex;
+	flex-direction:column;
+	flex: 25%;
+	text-align: center;
+	border-right: 1px solid lightgrey;
+	min-height:inherit;
+}
+
+.leftSection form{
+	display: flex;
+	flex-direction:column;
+}
+
+
+.rightSection{
+	display: flex;
+	flex-direction:column;
+	flex: 75%;
+	text-align: center;
+}
+
+.footer{
+	text-align: center;
+	font-size: small;
+	padding: 10px; 	
+	border-top: 1px solid lightgrey;
+	height: 15%;
+}	
+
+.even{
+	color:red;
+}
+.odd{
+	color:green;
+}

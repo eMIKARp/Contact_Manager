@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="PL">
+	<head ng-controller="ContactController as cControl">
+		<meta charset="UTF-8">
+		<title>{{cControl.appName}}</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	</head>
+	<body>
+		<div id="header" class="header">
+			<h1>List of Contacts</h1>
+		</div>
+		
+		<div id="main" class="main" ng-controller="ContactController as cControl">
+			
+			<div id="leftSection" class="leftSection">
+				<form id="addNewContact">
+					<h3>Add new contact</h3>
+					<input type="text" ng-model="cControl.contact.name" placeholder="First name">
+					<input type="text" ng-model="cControl.contact.surname" placeholder="Last name">
+					<input type="text" ng-model="cControl.contact.email" placeholder="Email address">
+					<input type="text" ng-model="cControl.contact.phone" placeholder="Phone number">
+					<button ng-click="cControl.addContact(cControl.contact)">Add contact</button>
+				</form>
+			</div>
+			
+			<div id="rightSection" class="rightSection">
+				<ul>
+					<h3>List of all contact</h3>
+					<li style="list-style:none;" ng-repeat="c in cControl.contacts" ng-class-even="'even'" ng-class-odd="'odd'" ng-click="cControl.loadData(c.id)">{{c.name}} - {{c.surname}} - {{c.email}} - {{c.phone}}</li>
+				</ul>
+				<div id="contactDetails" class="contactDetails" ng-show="cControl.details">
+					<h2>{{cControl.details.name}} {{cControl.details.surname}}</h2>
+					<p>Email address: {{cControl.details.email}}</p>
+					<p>Phone number: {{cControl.details.phone}}</p>
+				</div>
+				
+			</div>
+		</div>	
+
+		<div id="footer" class="footer">
+			<p>Created by Emil Karpowicz</p>
+		</div>
+		
+		<script type="application/javascript" src="js/lib/angular/angular.js"></script>
+		<script type="application/javascript" src="js/lib/angular-resource/angular-resource.js"></script>
+		<script type="application/javascript" src="js/app.js"></script>
+		<script type="application/javascript" src="js/services.js"></script>
+		<script type="application/javascript" src="js/controllers.js"></script>
+	</body>
+</html>
